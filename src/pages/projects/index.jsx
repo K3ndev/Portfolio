@@ -21,13 +21,17 @@ export default function Profile() {
   ];
 
   return (
-    <section className="pb-72">
-      <h1 className="text-trinary mb-3 prose prose-lg">Projects.</h1>
-      <p className="text-font-Secondary mb-10 prose prose-sm">
-        These are my open source projects which are fetched direclty from
-        Github.
-      </p>
-      <div className="grid gap-6 grid-cols-1">
+    <section className="mb-72">
+      <div>
+        <h1 className="text-trinary mb-3 prose prose-lg">Projects.</h1>
+      </div>
+      <div>
+        <p className="text-font-Secondary prose prose-sm">
+          These are my open source projects which are fetched direclty from
+          Github.
+        </p>
+      </div>
+      <div className="grid gap-6 grid-cols-1 mt-10">
         {DATA.map((item) => (
           <Card key={item.id} proj={item} />
           // console.log(item);

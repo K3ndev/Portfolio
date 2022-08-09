@@ -25,12 +25,14 @@ export default function Nav() {
         className="fixed top-0 left-0 right-0 h-1 bg-trinary origin-bottom-left"
         style={{ scaleX }}
       />
-      <nav className="flex justify-between py-10">
-        <span className="text-trinary prose prose-lg leading-5">
-          K3n
-          <br />
-          dev.
-        </span>
+      <nav className="flex justify-between py-14">
+        <div>
+          <h1 className="text-trinary prose prose-lg leading-5">
+            K3n
+            <br />
+            dev.
+          </h1>
+        </div>
 
         <div className="flex space-y-2 flex-col justify-center">
           <span className="block w-6 h-0.5 bg-trinary" />
