@@ -22,10 +22,10 @@ export default function Nav() {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-trinary origin-bottom-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-trinary origin-bottom-left md:hidden"
         style={{ scaleX }}
       />
-      <nav className="flex justify-between py-14">
+      <nav className="flex justify-between py-14 w-screen">
         <div>
           <h1 className="text-trinary prose prose-lg leading-5">
             K3n

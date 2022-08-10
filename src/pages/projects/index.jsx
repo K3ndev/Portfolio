@@ -21,7 +21,7 @@ export default function Profile() {
   ];
 
   return (
-    <section className="mb-72">
+    <section className="mb-72 md:h-screen md:snap-start">
       <div>
         <h1 className="text-trinary mb-3 prose prose-lg">Projects.</h1>
       </div>

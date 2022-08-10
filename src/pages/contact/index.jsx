@@ -5,7 +5,7 @@ import Footer from './components/footer/index';
 export default function Contact() {
   return (
     <>
-      <section className="mb-96 flex flex-col">
+      <section className="mb-96 flex flex-col md:h-screen md:snap-start">
         <h2 className="text-trinary prose prose-lg mb-3">Get in touch.</h2>
         <p className="text-font-Secondary prose prose-sm">
           If you want to work together, don&apos;t hesitate to contact me.
