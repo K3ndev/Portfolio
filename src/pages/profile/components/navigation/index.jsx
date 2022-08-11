@@ -27,7 +27,7 @@ export default function Nav() {
       />
       <nav className="flex justify-between py-14 w-screen">
         <div>
-          <h1 className="text-trinary prose prose-lg leading-5">
+          <h1 className="font-Roboto-Slab text-trinary prose prose-lg leading-5">
             K3n
             <br />
             dev.

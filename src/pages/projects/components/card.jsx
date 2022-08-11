@@ -22,14 +22,16 @@ export default function Card(props) {
     <div className="flex border p-4 flex-col gap-2 border-font-Secondary/20">
       <div className="flex gap-1 items-center">
         <FaFileCode className="text-font-Primary" />
-        <a href="##" className="text-trinary prose prose-base">
+        <a href="##" className="text-trinary prose prose-base font-Raleway">
           {title}
         </a>
       </div>
       <div>
-        <p className="prose prose-sm text-font-Secondary ">{disc}</p>
+        <p className="prose prose-sm text-font-Secondary font-Montserrat">
+          {disc}
+        </p>
       </div>
-      <span className="flex items-center mt-5 prose prose-sm text-trinary gap-3">
+      <span className="flex items-center mt-5 prose prose-sm text-trinary gap-3 font-Raleway">
         {/* {circleStatus()} */}
         <FaArrowRight />
         {language}

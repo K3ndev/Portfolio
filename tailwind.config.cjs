@@ -13,7 +13,13 @@ module.exports = {
       'font-trinary': '#3385ff',
       black: '##000000',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        Montserrat: ['Montserrat', 'sans-serif'],
+        Raleway: ['Raleway', 'sans-serif'],
+        'Roboto-Slab': ['Roboto-Slab', 'serif'],
+      },
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 };
