@@ -3,8 +3,13 @@ import React from 'react';
 import { FaFileCode, FaArrowRight } from 'react-icons/fa';
 
 export default function Card(props) {
-  // eslint-disable-next-line react/destructuring-assignment
-  const { title, disc, language } = props.proj;
+  const {
+    title,
+    disc,
+    language,
+    url,
+    // eslint-disable-next-line react/destructuring-assignment
+  } = props.proj;
 
   // circle condition
   //   const circleStatus = () => {
@@ -19,18 +24,27 @@ export default function Card(props) {
   //   };
 
   return (
-    <div className="flex border p-4 flex-col gap-2 border-font-Secondary/20">
-      <div className="flex gap-1 items-center">
-        <FaFileCode className="text-font-Primary" />
-        <a href="##" className="text-trinary prose prose-base font-Raleway">
-          {title}
-        </a>
-      </div>
+    <div className="flex justify-between border p-4 flex-col gap-2 border-font-Secondary/20">
       <div>
-        <p className="prose prose-sm text-font-Secondary font-Montserrat">
-          {disc}
-        </p>
+        <div className="flex gap-1 items-center mb-2">
+          <FaFileCode className="text-font-Primary" />
+          <a
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            className="text-font-Primary prose prose-base font-Raleway hover:text-trinary"
+          >
+            {title}
+          </a>
+        </div>
+
+        <div>
+          <p className="prose prose-sm text-font-Secondary font-Montserrat">
+            {disc}
+          </p>
+        </div>
       </div>
+
       <span className="flex items-center mt-5 prose prose-sm text-trinary gap-3 font-Raleway">
         {/* {circleStatus()} */}
         <FaArrowRight />

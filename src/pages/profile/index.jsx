@@ -13,17 +13,17 @@ export default function Profile() {
           </h1>
         </div>
         <div className="">
-          <h2 className="font-Raleway text-font-Primary prose prose-2xl text-4xl md:text-6xl ">
+          <h2 className="font-Raleway text-font-Primary prose prose-2xl text-4xl md:text-6xl">
             Kenneth Racelis.
           </h2>
         </div>
         <div className="">
-          <h3 className="font-Raleway text-font-Secondary prose prose-2xl text-4xl mt-2 md:text-6xl ">
+          <h3 className="font-Raleway text-font-Secondary prose prose-2xl text-4xl mt-2 md:text-6xl">
             I build things for the web.
           </h3>
         </div>
         <div className="">
-          <p className="font-Montserrat text-font-Secondary prose prose-sm md:prose-md my-5 ">
+          <p className="font-Montserrat text-font-Secondary prose prose-sm md:prose-md my-5">
             I&apos;m a self-taught front end developer. I build a website with
             Javascript, React and design using Tailwind and Framer motion. Im
             focused on improving website performance, responsiveness and
@@ -37,6 +37,9 @@ export default function Profile() {
           >
             Get My Resume
           </a>
+          <span className="px-2 text-[#ff0000] text-3xl">
+            Site under construction
+          </span>
         </div>
       </div>
     </section>

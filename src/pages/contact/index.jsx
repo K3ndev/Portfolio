@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { CopyButton, ActionIcon, Tooltip } from '@mantine/core';
+import { IconCopy, IconCheck } from '@tabler/icons';
 import Footer from './components/footer/index';
 
 export default function Contact() {
@@ -15,12 +17,29 @@ export default function Contact() {
         <p className="text-font-Secondary prose prose-base font-Montserrat">
           If you want to work together, don&apos;t hesitate to contact me.
         </p>
-        <a
-          href="##"
-          className="block text-font-Primary underline prose prose-base mt-2 font-Raleway hover:text-trinary"
-        >
-          jkenneth_racelis@pm.me
-        </a>
+
+        <div className="flex items-center">
+          <a
+            href="mailto:jkenneth_racelis@pm.me"
+            className="block text-font-Primary underline prose prose-base mt-2 font-Raleway hover:text-trinary"
+          >
+            jkenneth_racelis@pm.me
+          </a>
+
+          <CopyButton value="jkenneth_racelis@pm.me" timeout={2000}>
+            {({ copied, copy }) => (
+              <Tooltip
+                label={copied ? 'Copied' : 'Copy'}
+                withArrow
+                position="right"
+              >
+                <ActionIcon color={copied ? 'teal' : 'gray'} onClick={copy}>
+                  {copied ? <IconCheck size={16} /> : <IconCopy size={16} />}
+                </ActionIcon>
+              </Tooltip>
+            )}
+          </CopyButton>
+        </div>
         <div className="flex gap-2 mt-7">
           <a
             href="https://github.com/K3ndev"

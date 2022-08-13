@@ -48,8 +48,6 @@ export default function Nav() {
           <span className="block w-8 h-0.5 bg-trinary" />
         </div>
       </nav>
-
-      <div className="hidden md:absolute">Hellooooooo</div>
     </>
   );
 }
