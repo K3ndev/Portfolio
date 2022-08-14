@@ -43,7 +43,7 @@ export default function Profile() {
       title: 'Proj 6',
       disc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       language: 'Javascript',
-      id: 5,
+      id: 6,
       url: '',
     },
   ];

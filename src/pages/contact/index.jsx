@@ -10,7 +10,7 @@ export default function Contact() {
       className="px-10 flex flex-col md:w-3/4 md:m-auto lg:w-1/2 md:h-screen md:snap-start md:flex md:justify-center relative"
       id="Contact"
     >
-      <div className="mb-[33rem] md:mb-0">
+      <div className="mb-[30rem] md:mb-0">
         <h2 className="text-trinary prose prose-xl md:prose-2xl mb-3 font-Raleway">
           Get in touch.
         </h2>
@@ -33,8 +33,12 @@ export default function Contact() {
                 withArrow
                 position="right"
               >
-                <ActionIcon color={copied ? 'teal' : 'gray'} onClick={copy}>
-                  {copied ? <IconCheck size={16} /> : <IconCopy size={16} />}
+                <ActionIcon onClick={copy}>
+                  {copied ? (
+                    <IconCheck size={16} className="text-trinary" />
+                  ) : (
+                    <IconCopy size={16} className="hover:text-trinary" />
+                  )}
                 </ActionIcon>
               </Tooltip>
             )}
@@ -45,7 +49,7 @@ export default function Contact() {
             href="https://github.com/K3ndev"
             target="_blank"
             rel="noreferrer"
-            className="text-font-Secondary hover:text-trinary"
+            className="text-font-Secondary hover:text-trinary transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
           >
             <FaGithub />
           </a>
@@ -53,7 +57,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/jkenneth-racelis/"
             target="_blank"
             rel="noreferrer"
-            className="text-font-Secondary hover:text-trinary"
+            className="text-font-Secondary hover:text-trinary transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
           >
             <FaLinkedinIn />
           </a>
@@ -61,11 +65,12 @@ export default function Contact() {
             href="https://twitter.com/k3n_dev"
             target="_blank"
             rel="noreferrer"
-            className="text-font-Secondary hover:text-trinary"
+            className="text-font-Secondary hover:text-trinary transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
           >
             <FaTwitter />
           </a>
         </div>
+
         <Footer />
       </div>
     </section>

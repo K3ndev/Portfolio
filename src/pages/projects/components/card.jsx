@@ -24,7 +24,7 @@ export default function Card(props) {
   //   };
 
   return (
-    <div className="flex justify-between border p-4 flex-col gap-2 border-font-Secondary/20">
+    <div className="flex justify-between border p-4 flex-col gap-2 border-font-Secondary/20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 hover:border-trinary cursor-default">
       <div>
         <div className="flex gap-1 items-center mb-2">
           <FaFileCode className="text-font-Primary" />
@@ -32,7 +32,7 @@ export default function Card(props) {
             href={url}
             target="_blank"
             rel="noreferrer"
-            className="text-font-Primary prose prose-base font-Raleway hover:text-trinary"
+            className="text-font-Primary prose prose-base font-Raleway hover:text-trinary hover:underline"
           >
             {title}
           </a>

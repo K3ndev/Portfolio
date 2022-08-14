@@ -37,10 +37,13 @@ export default function Profile() {
           >
             Get My Resume
           </a>
-          <span className="px-2 text-[#ff0000] text-3xl">
-            Site under construction
-          </span>
         </div>
+      </div>
+      <div className="hidden md:flex md:rotate-90 md:bottom-[-74%] md:left-[48%] md:gap-1 cursor-default md:fixed md:w-screen">
+        <div className="text-font-Secondary/40 text-sm transition ease-in-out delay-150 hover:-translate-x-1 hover:scale-100 duration-900 hover:text-trinary">
+          <a href="mailto:jkenneth_racelis@pm.me">jkenneth_racelis@pm.me</a>
+        </div>
+        <span className=" border-t-2 w-28 text-font-Secondary/40" />
       </div>
     </section>
   );
