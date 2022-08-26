@@ -6,7 +6,7 @@ export default function Profile() {
   const DATA = [
     {
       title: 'Portfolio',
-      disc: 'My portfolio built with React, Tailwind, Framer motion and Vercel.',
+      disc: 'My portfolio is built with React, Tailwind, Framer motion and Vercel.',
       language: 'Javascript',
       id: 1,
       url: 'https://github.com/K3ndev/Portfolio',
