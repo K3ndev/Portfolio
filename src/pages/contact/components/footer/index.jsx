@@ -14,8 +14,18 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       <div className="md:hidden">
         <SttPortal />
+      </div>
+
+      <div className="hidden fixed bottom-[7rem] right-0 p-6 w-24 md:flex justify-center">
+        <div className="flex rotate-90 md:gap-1 cursor-default">
+          <div className="text-font-Secondary/40 text-sm transition ease-in-out delay-150 hover:-translate-x-1 hover:scale-100 duration-900 hover:text-trinary">
+            <a href="mailto:jkenneth_racelis@pm.me">jkenneth_racelis@pm.me</a>
+          </div>
+          <span className=" border-t-2 w-28 text-font-Secondary/40" />
+        </div>
       </div>
     </>
   );

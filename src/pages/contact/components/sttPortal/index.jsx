@@ -14,7 +14,7 @@ export default function SttPortal() {
             leftIcon={<IconArrowUp size={16} />}
             style={(transitionStyles, {})}
             onClick={() => scrollTo({ y: 0 })}
-            className="text-trinary hover:bg-trinary/10"
+            className="text-trinary hover:bg-trinary/10 animate-bounce"
           >
             <p className="text-trinary">Scroll to top</p>
           </Button>

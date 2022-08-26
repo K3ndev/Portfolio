@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function Profile() {
   return (
@@ -31,19 +32,14 @@ export default function Profile() {
           </p>
         </div>
         <div className="">
-          <a
+          <motion.a
+            whileTap={{ scale: 0.9 }}
             href="##"
             className=" font-Raleway inline-block text-trinary prose prose-lg mt-12 border border-trinary py-5 px-7 hover:bg-trinary/10"
           >
             Get My Resume
-          </a>
+          </motion.a>
         </div>
-      </div>
-      <div className="hidden md:flex md:rotate-90 md:bottom-[-74%] md:left-[48%] md:gap-1 cursor-default md:fixed md:w-screen">
-        <div className="text-font-Secondary/40 text-sm transition ease-in-out delay-150 hover:-translate-x-1 hover:scale-100 duration-900 hover:text-trinary">
-          <a href="mailto:jkenneth_racelis@pm.me">jkenneth_racelis@pm.me</a>
-        </div>
-        <span className=" border-t-2 w-28 text-font-Secondary/40" />
       </div>
     </section>
   );

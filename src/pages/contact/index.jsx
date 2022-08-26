@@ -1,32 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { CopyButton, ActionIcon, Tooltip } from '@mantine/core';
 import { IconCopy, IconCheck } from '@tabler/icons';
 import { motion } from 'framer-motion';
-import { useIntersection } from 'react-use';
+// import { useIntersection } from 'react-use';
 import Footer from './components/footer/index';
 
 export default function Contact() {
-  //
-  const intersectionRef = useRef(null);
-  const intersection = useIntersection(intersectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1,
-  });
-  // console.log(intersection && intersection.intersectionRatio); // greater than 1 === true
-
-  //
-  const isVisible = intersection && intersection.intersectionRatio < 1;
-  // const [sample, setSample] = useState(0);
-  // console.log(isVisible);
-  useEffect(() => {
-    if (isVisible === false) {
-      console.log('change');
-      setSample(-10);
-    }
-  }, [isVisible]);
-
   return (
     <section
       className="px-10 flex flex-col md:w-3/4 md:m-auto lg:w-1/2 md:h-screen md:snap-start md:flex md:justify-center relative"

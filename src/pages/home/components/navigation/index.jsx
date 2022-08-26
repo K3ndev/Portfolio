@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Burger } from '@mantine/core';
+import { useWindowScroll } from '@mantine/hooks';
 
 export default function Nav() {
   // progress bar animation
@@ -13,6 +14,12 @@ export default function Nav() {
 
   // burger
   const [opened, setOpened] = useState(false);
+
+  // scroll burger auto close [ x: 0, y: 245]
+  const [scroll] = useWindowScroll();
+  if (scroll.y > 520 && opened) {
+    setOpened(false);
+  }
 
   return (
     <>
@@ -39,15 +46,28 @@ export default function Nav() {
           </li>
         </ul>
 
-        <div className="flex md:hidden ">
+        <div className=" md:hidden">
           <Burger
             opened={opened}
             onClick={() => setOpened((o) => !o)}
             color="#76BA99"
           />
-          {opened && <h1>HI</h1>}
         </div>
       </nav>
+      {opened && (
+        <motion.div
+          className="flex justify-center pt-4 pb-14 animate-pulse"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <a
+            href="mailto:jkenneth_racelis@pm.me"
+            className=" font-Raleway inline-block text-primary bg-trinary hover:bg-trinary/75 prose prose-sm border py-3 px-7 rounded-full"
+          >
+            Say Hello
+          </a>
+        </motion.div>
+      )}
     </>
   );
 }
