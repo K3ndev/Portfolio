@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion';
-import { Burger } from '@mantine/core';
-import { useWindowScroll } from '@mantine/hooks';
+import React, { useState } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { Burger } from "@mantine/core";
+import { useWindowScroll } from "@mantine/hooks";
 
 export default function Nav() {
   // progress bar animation

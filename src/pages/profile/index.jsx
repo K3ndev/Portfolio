@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 export default function Profile() {
   return (
@@ -26,9 +26,8 @@ export default function Profile() {
         <div className="">
           <p className="font-Montserrat text-font-Secondary prose prose-sm md:prose-md my-5">
             I&apos;m a self-taught front end developer. I build a website with
-            Javascript, React and design using Tailwind and Framer motion. Im
-            focused on improving website performance, responsiveness and
-            accessibility.
+            React and design using different css framework. Im focused on
+            improving website performance, responsiveness and accessibility.
           </p>
         </div>
         <div className="">

@@ -1,50 +1,50 @@
-import React from 'react';
-import Card from './components/card';
+import React from "react";
+import Card from "./components/card";
 
 export default function Profile() {
   // TEST DATA
   const DATA = [
     {
-      title: 'Portfolio',
-      disc: 'My portfolio is built with React, Tailwind, Framer motion and Vercel.',
-      language: 'Javascript',
+      title: "Portfolio",
+      disc: "My portfolio - React",
+      language: "Javascript",
       id: 1,
-      url: 'https://github.com/K3ndev/Portfolio',
+      url: "https://github.com/K3ndev/Portfolio",
     },
     {
-      title: 'Proj 2',
-      disc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      language: 'Typescript',
+      title: "search-anime",
+      disc: "A react application that can search an anime, that use jikan API.",
+      language: "Javascript",
       id: 2,
-      url: '',
+      url: "",
     },
     {
-      title: 'Proj 3',
-      disc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      language: 'Python',
+      title: "hotel-reservation",
+      disc: "A step by step form reservation that build in ReactJs  ",
+      language: "Javascript",
       id: 3,
-      url: '',
+      url: "https://k3n-hotel-reservation.vercel.app/",
     },
     {
-      title: 'Proj 4',
-      disc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      language: 'Javascript',
+      title: "Proj 4",
+      disc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      language: "Javascript",
       id: 4,
-      url: '',
+      url: "",
     },
     {
-      title: 'Proj 5',
-      disc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      language: 'Javascript',
+      title: "Proj 5",
+      disc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      language: "Javascript",
       id: 5,
-      url: '',
+      url: "",
     },
     {
-      title: 'Proj 6',
-      disc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      language: 'Javascript',
+      title: "Proj 6",
+      disc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      language: "Javascript",
       id: 6,
-      url: '',
+      url: "",
     },
   ];
 
