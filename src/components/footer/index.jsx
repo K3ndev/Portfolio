@@ -1,5 +1,5 @@
-import React from 'react';
-import SttPortal from '../sttPortal/index';
+import React from "react";
+import SttPortal from "../sttPortal/index";
 
 export default function Footer() {
   return (

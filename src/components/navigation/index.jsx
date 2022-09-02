@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Burger } from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   // progress bar animation
@@ -28,7 +29,7 @@ export default function Nav() {
         style={{ scaleX }}
       />
 
-      <nav className="px-10 py-12 flex justify-between md:fixed md:w-full">
+      <nav className="px-10 py-12 flex justify-between md:fixed md:w-full ">
         <div className="font-Roboto-Slab leading-5 text-trinary prose prose-lg md:text-2xl md:leading-6">
           K3n
           <br />
@@ -36,13 +37,19 @@ export default function Nav() {
         </div>
         <ul className="hidden md:flex md:gap-5 font-Raleway text-font-Secondary">
           <li className="hover:text-trinary first-letter:text-trinary">
-            <a href="#Profile">Profile</a>
+            <a href="#Profile" id="underline-link">
+              Profile
+            </a>
           </li>
           <li className="hover:text-trinary first-letter:text-trinary">
-            <a href="#Projects">Projects</a>
+            <a href="#Projects" id="underline-link">
+              Projects
+            </a>
           </li>
           <li className="hover:text-trinary first-letter:text-trinary">
-            <a href="#Contact">Contact</a>
+            <a href="#Contact" id="underline-link">
+              Contact
+            </a>
           </li>
         </ul>
 

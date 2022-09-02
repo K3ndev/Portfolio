@@ -1,10 +1,8 @@
-import React from 'react';
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
-import { CopyButton, ActionIcon, Tooltip } from '@mantine/core';
-import { IconCopy, IconCheck } from '@tabler/icons';
-import { motion } from 'framer-motion';
-// import { useIntersection } from 'react-use';
-import Footer from './components/footer/index';
+import React from "react";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { CopyButton, ActionIcon, Tooltip } from "@mantine/core";
+import { IconCopy, IconCheck } from "@tabler/icons";
+import Footer from "../../components/footer/index";
 
 export default function Contact() {
   return (
@@ -12,7 +10,7 @@ export default function Contact() {
       className="px-10 flex flex-col md:w-3/4 md:m-auto lg:w-1/2 md:h-screen md:snap-start md:flex md:justify-center relative"
       id="Contact"
     >
-      <motion.div className="mb-[30rem] md:mb-0">
+      <div className="mb-[30rem] md:mb-0">
         <h2 className="text-trinary prose prose-xl md:prose-2xl mb-3 font-Raleway">
           Get in touch.
         </h2>
@@ -28,10 +26,11 @@ export default function Contact() {
             jkenneth_racelis@pm.me
           </a>
 
+          {/* copy email */}
           <CopyButton value="jkenneth_racelis@pm.me" timeout={2000}>
             {({ copied, copy }) => (
               <Tooltip
-                label={copied ? 'Copied' : 'Copy'}
+                label={copied ? "Copied" : "Copy"}
                 withArrow
                 position="right"
               >
@@ -72,12 +71,7 @@ export default function Contact() {
             <FaTwitter />
           </a>
         </div>
-        {/* <div ref={intersectionRef}>
-          {intersection && intersection.intersectionRatio < 1
-            ? 'Obscured'
-            : 'Fully in view'}
-        </div> */}
-      </motion.div>
+      </div>
       <Footer />
     </section>
   );
