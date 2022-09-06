@@ -4,14 +4,11 @@ import Layout from "./components/layout/index";
 
 function App() {
   return (
-    <>
-      <div id="noise-bg" />
-      <Routes>
-        {/* i cant work with tailwind-Scroll snapping and Route*/}
-        <Route path="/" element={<Layout />} />
-        <Route path="*" element={<h1>NOT FOUND</h1>} />
-      </Routes>
-    </>
+    <Routes>
+      {/* i cant work with tailwind-Scroll snapping and Route*/}
+      <Route path="/" element={<Layout />} />
+      <Route path="*" element={<h1>NOT FOUND</h1>} />
+    </Routes>
   );
 }
 

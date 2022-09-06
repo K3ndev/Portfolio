@@ -25,15 +25,16 @@ export default function Profile() {
         </div>
         <div className="">
           <p className="font-Montserrat text-font-Secondary prose prose-sm md:prose-md my-5">
-            I&apos;m a self-taught front end developer. I build a website with
-            React and design using different css framework. Im focused on
-            improving website performance, responsiveness and accessibility.
+            I&apos;m React developer. I build a front-end application that
+            contributes to the entire product's success. View a selection of my
+            work under projects section.
           </p>
         </div>
         <div className="">
           <motion.a
             whileTap={{ scale: 0.9 }}
-            href="##"
+            target="_blank"
+            href="https://docs.google.com/document/d/1_1IBzECs29eryEUL-8Yr32n4-MIBvdF6/edit?usp=sharing&ouid=105405203970849961978&rtpof=true&sd=true"
             className=" font-Raleway inline-block text-trinary prose prose-lg mt-12 border border-trinary py-5 px-7 hover:bg-trinary/10"
           >
             Get My Resume
