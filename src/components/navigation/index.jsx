@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Burger } from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
-import { Link } from "react-router-dom";
-
-export default function Nav() {
+export default function Nav(props) {
   // progress bar animation
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -22,6 +20,9 @@ export default function Nav() {
     setOpened(false);
   }
 
+  //destructuring for scrollTo Div
+  const { scrollToProfile, scrollToProjects, scrollToContact } = props;
+
   return (
     <>
       <motion.div
@@ -36,20 +37,32 @@ export default function Nav() {
           dev.
         </div>
         <ul className="hidden md:flex md:gap-5 font-Raleway text-font-Secondary">
-          <li className="hover:text-trinary first-letter:text-trinary">
-            <a href="#Profile" id="underline-link">
+          <li>
+            <button
+              onClick={() => scrollToProfile()}
+              className="hover:text-trinary first-letter:text-trinary"
+              id="underline-link"
+            >
               Profile
-            </a>
+            </button>
           </li>
-          <li className="hover:text-trinary first-letter:text-trinary">
-            <a href="#Projects" id="underline-link">
+          <li>
+            <button
+              onClick={() => scrollToProjects()}
+              className="hover:text-trinary first-letter:text-trinary"
+              id="underline-link"
+            >
               Projects
-            </a>
+            </button>
           </li>
-          <li className="hover:text-trinary first-letter:text-trinary">
-            <a href="#Contact" id="underline-link">
+          <li>
+            <button
+              onClick={() => scrollToContact()}
+              className="hover:text-trinary first-letter:text-trinary"
+              id="underline-link"
+            >
               Contact
-            </a>
+            </button>
           </li>
         </ul>
 

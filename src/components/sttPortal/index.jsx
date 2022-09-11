@@ -1,7 +1,7 @@
-import React from 'react';
-import { IconArrowUp } from '@tabler/icons';
-import { useWindowScroll } from '@mantine/hooks';
-import { Affix, Button, Transition } from '@mantine/core';
+import React from "react";
+import { IconArrowUp } from "@tabler/icons";
+import { useWindowScroll } from "@mantine/hooks";
+import { Affix, Button, Transition } from "@mantine/core";
 
 export default function SttPortal() {
   const [scroll, scrollTo] = useWindowScroll();
@@ -14,7 +14,7 @@ export default function SttPortal() {
             leftIcon={<IconArrowUp size={16} />}
             style={(transitionStyles, {})}
             onClick={() => scrollTo({ y: 0 })}
-            className="text-trinary hover:bg-trinary/10 animate-bounce"
+            className="text-trinary hover:bg-trinary/10 animate-bounce md:hidden"
           >
             <p className="text-trinary">Scroll to top</p>
           </Button>

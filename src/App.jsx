@@ -14,4 +14,5 @@ function App() {
 
 export default App;
 
-// tailwind-Scroll snapping has different behavior in chrome
+// fullpage.js is my goal
+// mantine carousel doesn't have yet scroll listener... so lets wait
