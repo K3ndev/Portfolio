@@ -1,14 +1,39 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useIntersection } from "@mantine/hooks";
+import { useAtom } from "jotai";
+import { activeDiv } from "../../store/activeDiv";
 
 export default function Profile() {
+  // listener for div is visible or not
+  const containerRef = useRef();
+  const { ref, entry } = useIntersection({
+    root: containerRef.current,
+    threshold: 1,
+  });
+  const isIntersecting = entry?.isIntersecting;
+
+  // jotai states
+  const [isVisible, setIsVisible] = useAtom(activeDiv);
+
+  // change if the listener isVisible or not
+  useEffect(() => {
+    if (isIntersecting) {
+      setIsVisible({
+        isVisible_profile: true,
+        isVisible_projects: false,
+        isVisible_contact: false,
+      });
+    }
+  }, [isIntersecting]);
+
   return (
     <section
       className="px-10 flex flex-col mb-72 md:w-3/4 md:mx-auto md:mb-0 lg:w-1/2 md:h-screen md:snap-start md:flex md:justify-center"
       id="Profile"
     >
-      <div className="">
-        <div className="">
+      <div ref={ref}>
+        <div>
           <h1 className="font-Raleway text-trinary prose prose-sm md:prose-base mb-5">
             Hi, my name is
           </h1>

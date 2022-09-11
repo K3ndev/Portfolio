@@ -12,6 +12,9 @@ export default function layout() {
     useScrollIntoView();
   const { scrollIntoView: scrollToContact, targetRef: toContact } =
     useScrollIntoView();
+
+  // listener active links
+
   return (
     // I remove md:max-h-screen in the main className, the carousel doesn't working -tailwind-
     <main className="bg-primary md:overflow-y-scroll md:snap md:snap-y md:snap-mandatory relative">

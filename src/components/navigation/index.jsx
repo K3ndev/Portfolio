@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Burger } from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
+import { useAtom } from "jotai";
+import { activeDiv } from "../../store/activeDiv";
+
 export default function Nav(props) {
   // progress bar animation
   const { scrollYProgress } = useScroll();
@@ -23,6 +26,11 @@ export default function Nav(props) {
   //destructuring for scrollTo Div
   const { scrollToProfile, scrollToProjects, scrollToContact } = props;
 
+  // jotai states
+  const [isVisible, setIsVisible] = useAtom(activeDiv);
+  const { isVisible_profile, isVisible_projects, isVisible_contact } =
+    isVisible;
+
   return (
     <>
       <motion.div
@@ -40,8 +48,12 @@ export default function Nav(props) {
           <li>
             <button
               onClick={() => scrollToProfile()}
-              className="hover:text-trinary first-letter:text-trinary"
-              id="underline-link"
+              className={`hover:text-trinary first-letter:text-trinary ${
+                isVisible_profile ? "text-trinary" : ""
+              }`}
+              id={`${
+                isVisible_profile ? "underline-active" : "underline-link"
+              }`}
             >
               Profile
             </button>
@@ -49,8 +61,12 @@ export default function Nav(props) {
           <li>
             <button
               onClick={() => scrollToProjects()}
-              className="hover:text-trinary first-letter:text-trinary"
-              id="underline-link"
+              className={`hover:text-trinary first-letter:text-trinary ${
+                isVisible_projects ? "text-trinary" : ""
+              }`}
+              id={`${
+                isVisible_projects ? "underline-active" : "underline-link"
+              }`}
             >
               Projects
             </button>
@@ -58,8 +74,12 @@ export default function Nav(props) {
           <li>
             <button
               onClick={() => scrollToContact()}
-              className="hover:text-trinary first-letter:text-trinary"
-              id="underline-link"
+              className={`hover:text-trinary first-letter:text-trinary ${
+                isVisible_contact ? "text-trinary" : ""
+              }`}
+              id={`${
+                isVisible_contact ? "underline-active" : "underline-link"
+              }`}
             >
               Contact
             </button>

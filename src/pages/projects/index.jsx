@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Card from "../../components/card/index";
+import { useIntersection } from "@mantine/hooks";
+import { useAtom } from "jotai";
+import { activeDiv } from "../../store/activeDiv";
 
 export default function Profile() {
   // TEST DATA
@@ -48,12 +51,34 @@ export default function Profile() {
     },
   ];
 
+  // listener for div is visible or not
+  const containerRef = useRef();
+  const { ref, entry } = useIntersection({
+    root: containerRef.current,
+    threshold: 1,
+  });
+  const isIntersecting = entry?.isIntersecting;
+
+  // jotai states
+  const [isVisible, setIsVisible] = useAtom(activeDiv);
+
+  // change if the listener isVisible or not
+  useEffect(() => {
+    if (isIntersecting) {
+      setIsVisible({
+        isVisible_profile: false,
+        isVisible_projects: true,
+        isVisible_contact: false,
+      });
+    }
+  }, [isIntersecting]);
+
   return (
     <section
       className="px-10 mb-72 md:w-3/4 md:m-auto lg:w-2/3 md:h-screen md:snap-start md:flex md:items-center"
       id="Projects"
     >
-      <div>
+      <div ref={ref}>
         <div>
           <h1 className="text-trinary mb-3 prose prose-xl md:prose-2xl font-Raleway md:mb-1">
             Projects.

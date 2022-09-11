@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { CopyButton, ActionIcon, Tooltip } from "@mantine/core";
 import { IconCopy, IconCheck } from "@tabler/icons";
+import { useIntersection } from "@mantine/hooks";
+import { useAtom } from "jotai";
+import { activeDiv } from "../../store/activeDiv";
 import Footer from "../../components/footer/index";
 
 export default function Contact() {
+  // listener for div is visible or not
+  const containerRef = useRef();
+  const { ref, entry } = useIntersection({
+    root: containerRef.current,
+    threshold: 1,
+  });
+  const isIntersecting = entry?.isIntersecting;
+
+  // jotai states
+  const [isVisible, setIsVisible] = useAtom(activeDiv);
+
+  // change if the listener isVisible or not
+  useEffect(() => {
+    if (isIntersecting) {
+      setIsVisible({
+        isVisible_profile: false,
+        isVisible_projects: false,
+        isVisible_contact: true,
+      });
+    }
+  }, [isIntersecting]);
   return (
     <section
       className="px-10 flex flex-col md:w-3/4 md:m-auto lg:w-1/2 md:h-screen md:snap-start md:flex md:justify-center relative"
       id="Contact"
     >
-      <div className="mb-[30rem] md:mb-0">
+      <div className="mb-[30rem] md:mb-0" ref={ref}>
         <h2 className="text-trinary prose prose-xl md:prose-2xl mb-3 font-Raleway">
           Get in touch.
         </h2>
