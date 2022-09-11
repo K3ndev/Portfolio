@@ -16,8 +16,8 @@ export default function layout() {
   // listener active links
 
   return (
-    // I remove md:max-h-screen in the main className, the carousel doesn't working -tailwind-
-    <main className="bg-primary md:overflow-y-scroll md:snap md:snap-y md:snap-mandatory relative">
+    // I remove [md:max-h-screen , md:overflow-y-scroll md:snap md:snap-y md:snap-mandatory ]in the main className, the carousel doesn't working -tailwind-
+    <main className="bg-primary relative">
       <Nav
         scrollToProfile={scrollToProfile}
         scrollToProjects={scrollToProjects}
