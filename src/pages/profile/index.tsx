@@ -34,7 +34,7 @@ export default function Profile() {
     >
       <div ref={ref}>
         <div>
-          <h1 className="font-Raleway text-trinary prose prose-sm md:prose-base mb-5">
+          <h1 className="font-Raleway text-trinary prose prose-sm md:prose-base mb-5 mt-5 md:mt-0">
             Hi, my name is
           </h1>
         </div>

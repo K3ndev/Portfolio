@@ -1,17 +1,17 @@
 import { useScrollIntoView } from "@mantine/hooks";
-import Nav from "../../components/navigation/index";
+import Nav from "../navigation/index";
 import Profile from "../../pages/profile/index";
 import Projects from "../../pages/projects/index";
 import Contact from "../../pages/contact/index";
 
-export default function layout() {
+const layout: React.FC = ()=> {
   // listener for scroll to div event
   const { scrollIntoView: scrollToProfile, targetRef: toProfile } =
-    useScrollIntoView();
+    useScrollIntoView<HTMLDivElement>();
   const { scrollIntoView: scrollToProjects, targetRef: toProjects } =
-    useScrollIntoView();
+    useScrollIntoView<HTMLDivElement>();
   const { scrollIntoView: scrollToContact, targetRef: toContact } =
-    useScrollIntoView();
+    useScrollIntoView<HTMLDivElement>();
 
   // listener active links
 
@@ -35,3 +35,6 @@ export default function layout() {
     </main>
   );
 }
+
+
+export default layout;

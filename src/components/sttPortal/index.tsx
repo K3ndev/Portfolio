@@ -3,7 +3,7 @@ import { IconArrowUp } from "@tabler/icons";
 import { useWindowScroll } from "@mantine/hooks";
 import { Affix, Button, Transition } from "@mantine/core";
 
-export default function SttPortal() {
+const SttPortal: React.FC = () => {
   const [scroll, scrollTo] = useWindowScroll();
 
   return (
@@ -12,7 +12,7 @@ export default function SttPortal() {
         {(transitionStyles) => (
           <Button
             leftIcon={<IconArrowUp size={16} />}
-            style={(transitionStyles, {})}
+            style={(transitionStyles)}
             onClick={() => scrollTo({ y: 0 })}
             className="text-trinary hover:bg-trinary/10 animate-bounce md:hidden"
           >
@@ -23,3 +23,5 @@ export default function SttPortal() {
     </Affix>
   );
 }
+
+export default SttPortal;

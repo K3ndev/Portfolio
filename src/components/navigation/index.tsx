@@ -5,7 +5,13 @@ import { useWindowScroll } from "@mantine/hooks";
 import { useAtom } from "jotai";
 import { activeDiv } from "../../store/activeDiv";
 
-export default function Nav(props) {
+interface props{
+  scrollToProfile: ()=> void, 
+  scrollToProjects: ()=> void,
+  scrollToContact: ()=> void;
+}
+
+export default function Nav(props: props) {
   // progress bar animation
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {

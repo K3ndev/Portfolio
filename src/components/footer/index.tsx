@@ -1,7 +1,7 @@
 import React from "react";
 import SttPortal from "../sttPortal/index";
 
-export default function Footer() {
+ const Footer: React.FC = () => {
   return (
     <>
       <div className="flex justify-center pb-10 text-center absolute bottom-0 left-0 right-0">
@@ -30,3 +30,4 @@ export default function Footer() {
     </>
   );
 }
+export default Footer

@@ -7,7 +7,7 @@ import { useAtom } from "jotai";
 import { activeDiv } from "../../store/activeDiv";
 import Footer from "../../components/footer/index";
 
-export default function Contact() {
+const Contact: React.FC = () => {
   // listener for div is visible or not
   const containerRef = useRef();
   const { ref, entry } = useIntersection({
@@ -100,3 +100,5 @@ export default function Contact() {
     </section>
   );
 }
+
+export default Contact;

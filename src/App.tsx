@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import Layout from "./components/layout/index";
 
-function App() {
+const App: React.FC = () => {
   return (
     <Routes>
       {/* i cant work with tailwind-Scroll snapping and Route*/}

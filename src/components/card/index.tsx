@@ -2,7 +2,18 @@ import React from "react";
 import { FaFileCode, FaArrowRight } from "react-icons/fa";
 import validateUrl from "../../helper/validateUrl";
 
-export default function Card(props) {
+interface props {
+  proj: {
+    title: string,
+    disc: string,
+    language: string,
+    url: string
+  }
+}
+
+const Card: React.FC<props> = (props) => {
+
+  // destructuring 
   const { title, disc, language, url } = props.proj;
 
   return (
@@ -34,3 +45,5 @@ export default function Card(props) {
     </div>
   );
 }
+
+export default Card;
