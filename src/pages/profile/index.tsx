@@ -67,7 +67,7 @@ export default function Profile() {
     >
       <motion.div initial={{ opacity: 0}} animate={{ opacity: opacityIncrease }} transition={{ duration: 0.5, delay: delayIncrease}}>
         <div>
-          <h1 ref={ref} className="font-Raleway text-trinary prose prose-sm md:prose-base mb-5 mt-20 md:mt-0">
+          <h1 ref={ref} className="font-Raleway text-trinary prose prose-sm md:prose-base mb-5 mt-5 md:mt-0">
             Hi, my name is
           </h1>
         </div>
