@@ -44,7 +44,9 @@ export default function Nav(props: props) {
         style={{ scaleX }}
       />
 
-      <nav className="px-10 py-12 flex justify-between md:fixed md:w-full ">
+      <motion.nav className="px-10 py-12 flex justify-between md:fixed md:w-full "
+        initial={{ y: -250}} animate={{ y: 0 }} transition={{ duration: 1}}
+      >
         <div className="font-Roboto-Slab leading-5 text-trinary prose prose-lg md:text-2xl md:leading-6">
           K3n
           <br />
@@ -99,7 +101,7 @@ export default function Nav(props: props) {
             color="#76BA99"
           />
         </div>
-      </nav>
+      </motion.nav>
       {opened && (
         <motion.div
           className="flex justify-center pt-4 pb-14 animate-pulse"

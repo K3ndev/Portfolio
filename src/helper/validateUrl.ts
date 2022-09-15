@@ -1,14 +1,12 @@
-import React from "react";
+import React from 'react';
 
- const validateUrl = (URL:string) => {
-    const regex = new RegExp(
-      "(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?"
-    );
-    if (regex.test(URL)) {
-      return URL;
-    } else {
-      return "";
-    }
-  };
+const validateUrl = (URL: string) => {
+  const regex = new RegExp('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?');
+  if (regex.test(URL)) {
+    return URL;
+  } else {
+    return '';
+  }
+};
 
-  export default validateUrl
+export default validateUrl;
