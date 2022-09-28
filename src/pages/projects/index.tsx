@@ -32,7 +32,7 @@ export default function Profile() {
     {
       title: "book-store",
       disc: "Next js - book store",
-      language: "Typescript, Tailwind, Zustand",
+      language: "Typescript, Tailwind, Zustand, firebase",
       id: 4,
       url: "https://k3n-book-store.vercel.app/",
     },
