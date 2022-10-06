@@ -17,7 +17,7 @@ export default function Profile() {
     },
     {
       title: "search-anime",
-      disc: "React: An application that can search for an anime that uses the Jikan API.",
+      disc: "React: An application that can search for an anime that used Jikan API.",
       language: "Typescript, Tailwind, ReactQuery",
       id: 2,
       url: "https://search-anime.vercel.app/",
@@ -31,17 +31,17 @@ export default function Profile() {
     },
     {
       title: "book-store",
-      disc: "Next.js: book store",
-      language: "Typescript, Tailwind, Zustand, Firebase",
+      disc: "Next.js: A book store that used supabase api",
+      language: "Typescript, Tailwind, Zustand",
       id: 4,
       url: "https://k3n-book-store.vercel.app/",
     },
     {
-      title: "Proj 5",
-      disc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      language: "Typescript",
+      title: "todo",
+      disc: "Next.js: dona's clone todo",
+      language: "Typescript, Tailwind, Zustand",
       id: 5,
-      url: "",
+      url: "https://k3n-todo.vercel.app/",
     },
     {
       title: "Proj 6",
