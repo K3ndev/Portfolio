@@ -31,7 +31,7 @@ export default function Profile() {
     },
     {
       title: "book-store",
-      disc: "Next.js: A book store that used supabase api",
+      disc: "Next.js: A book store that used supabase cloud database",
       language: "Typescript, Tailwind, Zustand",
       id: 4,
       url: "https://k3n-book-store.vercel.app/",

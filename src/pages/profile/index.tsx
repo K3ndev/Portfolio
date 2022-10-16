@@ -69,7 +69,9 @@ export default function Profile() {
         </div>
         <div className="">
 
-          <motion.a whileTap={{ scale: 1.1 }} href='https://k3ndev.vercel.app/Kenneth-Racelis_Resume.docx.pdf' target="_blank" className=" font-Raleway inline-block text-trinary prose prose-lg mt-12 border border-trinary py-5 px-7 hover:bg-trinary/10 cursor-pointer"
+          {/* <motion.a whileTap={{ scale: 1.1 }} href='https://k3ndev.vercel.app/Kenneth-Racelis_Resume.docx.pdf' target="_blank" className=" font-Raleway inline-block text-trinary prose prose-lg mt-12 border border-trinary py-5 px-7 hover:bg-trinary/10 cursor-pointer"
+          >Get My Resume</motion.a> */}
+          <motion.a whileTap={{ scale: 1.1 }} href='#' className=" font-Raleway inline-block text-trinary prose prose-lg mt-12 border border-trinary py-5 px-7 hover:bg-trinary/10 cursor-pointer"
           >Get My Resume</motion.a>
         </div>
       </motion.div>
